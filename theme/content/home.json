@@ -1,13 +1,9 @@
-function extras() {
-  return src([
-    'source/robots.txt',
-    'source/admin/**/*',
-    'source/content/**/*',
-    'source/*.xml',
-    'source/favicon.ico',
-    'source/site.webmanifest'
-  ], { allowEmpty: true }).pipe(dest('theme'));
+{
+  "heroTitle": "WE BELIEVE SUSTAINABILITY",
+  "heroSubtitle": "We will deal with your failure that determines how you achieve success.",
+  "cta1Text": "GET FREE QUOTE",
+  "cta1Href": "contact.html",
+  "cta2Text": "LEARN MORE",
+  "cta2Href": "about.html",
+  "heroImage": "/images/hero/baiyun-line.jpg"
 }
-exports.extras = extras;
-// 你的构建任务里把 extras 串进去
-exports.build = series(clean, parallel(styles, scripts, images, html), extras);
