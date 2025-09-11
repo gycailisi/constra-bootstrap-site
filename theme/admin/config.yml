@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-# 媒体文件放在 theme 里，线上访问仍是 /images/uploads
+# 这两个路径一个是仓库里的真实目录，一个是网站访问路径
 media_folder: "theme/images/uploads"
 public_folder: "/images/uploads"
 
@@ -15,10 +15,10 @@ collections:
         label: "Homepage Hero"
         name: "hero"
         fields:
-          - { label: "Hero Title", name: "heroTitle", widget: "string" }
-          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
-          - { label: "Primary CTA Text", name: "cta1Text", widget: "string" }
-          - { label: "Primary CTA Link", name: "cta1Href", widget: "string" }
-          - { label: "Secondary CTA Text", name: "cta2Text", widget: "string" }
-          - { label: "Secondary CTA Link", name: "cta2Href", widget: "string" }
-          - { label: "Hero Background", name: "heroImage", widget: "image" }
+          - { label: "Hero Title",       name: "heroTitle",    widget: "string" }
+          - { label: "Hero Subtitle",    name: "heroSubtitle", widget: "string" }
+          - { label: "Primary CTA Text", name: "cta1Text",     widget: "string" }
+          - { label: "Primary CTA Link", name: "cta1Href",     widget: "string" }
+          - { label: "Secondary CTA Text", name: "cta2Text",   widget: "string" }
+          - { label: "Secondary CTA Link", name: "cta2Href",   widget: "string" }
+          - { label: "Hero Background",  name: "heroImage",    widget: "image", default: "/images/hero/baiyun-line.jpg" }
