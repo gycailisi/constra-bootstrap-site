@@ -2,7 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "source/images/uploads"
+# 媒体文件放在 theme 里，线上访问仍是 /images/uploads
+media_folder: "theme/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
@@ -10,14 +11,14 @@ collections:
     label: "Home"
     format: "json"
     files:
-      - file: "source/content/home.json"
+      - file: "theme/content/home.json"
         label: "Homepage Hero"
         name: "hero"
         fields:
-          - { label: "Hero Title",    name: "heroTitle",    widget: "string" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
           - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
-          - { label: "Primary CTA Text", name: "cta1Text",  widget: "string", default: "Get Quote" }
-          - { label: "Primary CTA Link", name: "cta1Href",  widget: "string", default: "contact.html" }
-          - { label: "Secondary CTA Text", name: "cta2Text", widget: "string", default: "View Products" }
-          - { label: "Secondary CTA Link", name: "cta2Href", widget: "string", default: "products.html" }
-          - { label: "Hero Background", name: "heroImage",  widget: "image",  default: "/images/hero/baiyun-line.jpg" }
+          - { label: "Primary CTA Text", name: "cta1Text", widget: "string" }
+          - { label: "Primary CTA Link", name: "cta1Href", widget: "string" }
+          - { label: "Secondary CTA Text", name: "cta2Text", widget: "string" }
+          - { label: "Secondary CTA Link", name: "cta2Href", widget: "string" }
+          - { label: "Hero Background", name: "heroImage", widget: "image" }
