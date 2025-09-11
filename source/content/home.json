@@ -1,0 +1,13 @@
+function extras() {
+  return src([
+    'source/robots.txt',
+    'source/admin/**/*',
+    'source/content/**/*',
+    'source/*.xml',
+    'source/favicon.ico',
+    'source/site.webmanifest'
+  ], { allowEmpty: true }).pipe(dest('theme'));
+}
+exports.extras = extras;
+// 你的构建任务里把 extras 串进去
+exports.build = series(clean, parallel(styles, scripts, images, html), extras);
